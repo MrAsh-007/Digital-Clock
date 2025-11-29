@@ -29,6 +29,13 @@ function timeUpdate() {
     document.getElementById("hours").innerHTML = hours();
     document.getElementById("minutes").innerHTML = minutes();
     document.getElementById("seconds").innerHTML = seconds();
+
+    if (new Date().getHours() > 12) {
+        document.getElementById("nbox").innerHTML = "PM";
+    } else {
+        document.getElementById("nbox").innerHTML = "AM";
+    }
+
 }
 setInterval(timeUpdate, 1000);
 timeUpdate();
